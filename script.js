@@ -63,12 +63,16 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 //working on this
+
 document.querySelector('.again').addEventListener('click', function() {
   document.querySelector('.message').textContent = 'Start guessing...'
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').textContent = '?';
-  document.querySelector('.guess').textContent = '2';
+
+  //not working
+  document.querySelector('.guess').textContent = '0';
+  document.querySelector('.number').textContent = '?';
   
   
 })

@@ -14,12 +14,8 @@ console.log(document.querySelector('.guess').value);
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 
-
-
-//delete this after testing 
-// document.querySelector('.number').textContent = secretNumber;
-
-
+//delete this after testing
+document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -64,15 +60,17 @@ document.querySelector('.check').addEventListener('click', function () {
 
 //working on this
 
-document.querySelector('.again').addEventListener('click', function() {
-  document.querySelector('.message').textContent = 'Start guessing...'
+document.querySelector('.again').addEventListener('click', function () {
+  //changes message box back to start guessing
+  document.querySelector('.message').textContent = 'Start guessing...';
+  //html ans css reset
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.number').textContent = '?';
-
-  //not working
-  document.querySelector('.guess').textContent = '0';
-  document.querySelector('.number').textContent = '?';
-  
-  
-})
+  // document.querySelector('.number').textContent = '?';
+  //changes score back to 20
+  document.querySelector('.score').textContent = 20;
+  //changes text box to empty
+  document.querySelector('.guess').value = '';
+  // still working on this, it changes the secret number to another random number
+  let secretNumber = Math.trunc(Math.random() * 20) + 1;
+});

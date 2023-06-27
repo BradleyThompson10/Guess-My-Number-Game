@@ -15,7 +15,7 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 
 //delete this after testing
-document.querySelector('.number').textContent = secretNumber;
+// document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -68,9 +68,13 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
   // document.querySelector('.number').textContent = '?';
   //changes score back to 20
-  document.querySelector('.score').textContent = 20;
+  score = 20;
+  document.querySelector('.score').textContent = score;
   //changes text box to empty
   document.querySelector('.guess').value = '';
-  // still working on this, it changes the secret number to another random number
-  let secretNumber = Math.trunc(Math.random() * 20) + 1;
+  // generates a new random number
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(secretNumber);
+  //displays .number as a ? to the player
+  document.querySelector('.number').textContent = '?';
 });
